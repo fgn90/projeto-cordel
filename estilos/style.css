@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* Importação das fontes. */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Passion+One:wght@400;700;900&display=swap');
+
+/* Criação de variáveis. */
+ :root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Courgette', cursive;
+}
+
+/* Configuração padrão para remover todas as margens e paddings padrões. */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Configuração padrão utilizada pelo HTML todo e pelo body. */
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Configuração de todo h1 dentro do header. 
+OBS: font-size utilizando vw para tentar criar uma responsividade, de uma forma não muito usual, mas funciona. */
+header > h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase;*/
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 7.5vw;
+}
+
+/* Configuração de todo p dentro do header. */
+header > p {
+    padding-bottom: 50px;
+}
+
+/* Configuração dos links "a" dentro de header e footer. */
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Configuração dos links "a" do header e footer, adicionando uma pseudo-classe para quando passar o mouse no link, ele se tornar sublinhado. */
+header a:hover, footer a:hover  {
+    text-decoration: underline;
+}
+
+/* Configuração de todas as sections. 
+OBS: font-size utilizando vw para tentar criar uma responsividade, de uma forma não muito usual, mas funciona. */
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+/* Configuração de todo p dentro das sections. */
+section > p {
+    padding-bottom: 1em;
+}
+
+/* Configuração da section da classe normal. */
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+/* Configuração da section da classe imagem. O "background-attachment: fixed;" cria um efeito chamado Parallax, onde ao scrollar o site a imagem fica fixa e não se move.*/
+section.imagem {
+    background-color: rgb(68, 68, 68);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Configuração de todo p dentro da section cuja classe é imagem. */
+section.imagem > p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.473);
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+/* Configuração de todo p dentro da section cujo ID é img01. */
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: center center;
+}
+
+/* Configuração de todo p dentro da section cujo ID é img02. */
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
